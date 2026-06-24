@@ -12,8 +12,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - run: node rss-feed.js > hundred-days.xml
+      - run: node rss-feed.js > docs/hundred-days.xml
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: 'Update RSS feed'
-          file_pattern: hundred-days.xml
+          file_pattern: docs/hundred-days.xml
