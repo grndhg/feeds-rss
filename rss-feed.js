@@ -53,7 +53,7 @@ function generateRSS(entries) {
       <link>${escapeXML(entry.url)}</link>
       <guid>${escapeXML(entry.url)}</guid>
       <pubDate>${new Date(entry.date).toUTCString()}</pubDate>
-      <description><![CDATA[<img src="${escapeXML(entry.image)}" alt="${escapeXML(entry.description)}" /><p>${escapeXML(entry.description)}</p>]]></description>
+      <description><![CDATA[<img src="${escapeXML(entry.image)}" /><p>${escapeXML(entry.description)}</p>]]></description>
     </item>`).join('');
 
   return `<?xml version="1.0" encoding="UTF-8"?>
