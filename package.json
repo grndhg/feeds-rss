@@ -1,0 +1,6 @@
+{
+  "name": "hundred-days-rss",
+  "version": "1.0.0",
+  "description": "RSS feed generator for Hundred Rabbits Days photo journal",
+  "main": "rss-feed.js"
+}
