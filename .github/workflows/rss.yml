@@ -1,7 +1,7 @@
 name: Generate RSS Feed
 on:
   schedule:
-    - cron: '0 6 * * *' # Daily at 6 AM UTC
+    - cron: '0 6 * * *'
   workflow_dispatch:
 
 jobs:
@@ -12,7 +12,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - run: node rss-feed.js > docs/hundred-days.xml
+      - run: |
+          mkdir -p docs
+          node rss-feed.js > docs/hundred-days.xml
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: 'Update RSS feed'
